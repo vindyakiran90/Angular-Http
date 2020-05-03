@@ -1,0 +1,20 @@
+<div class="container mt-4" >
+<table class=  "table table-hover table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th>ID</th>
+            <th>UserID</th>
+            <th>Title</th>
+            <th>Body</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let post of posts'>
+            <td>{{post.id}}</td>
+            <td>{{post.userId}}</td>
+            <td>{{post.title}}</td>
+            <td>{{post.body}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>

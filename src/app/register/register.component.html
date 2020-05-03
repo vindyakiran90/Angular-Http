@@ -1,0 +1,38 @@
+<div class="alert alert-danger" *ngIf='error'>{{error}}</div>
+<div class="alert alert-success" *ngIf='message'>{{message}}</div>
+<div class="col-md-4 offset-md-4 mt-5">
+    <form #registerForm='ngForm' (ngSubmit)='registerUser(registerForm)'>
+        <div class="card">
+            <div class="card-header">
+                <h4>Please Register!!!</h4>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" name="fullName" id="fullName"
+                    #fullName='ngModel' ngModel  class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" 
+                    #email='ngModel' ngModel class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" 
+                    #password='ngModel' ngModel class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="role">Select Role</label>
+                    <select name="role" id="role" #role='ngModel' ngModel class="form">
+                        <option value="admin">Admin</option>
+                        <option value="user">User</option>
+                </select></div>
+            </div>
+            <div class="card-footer">
+                <a routerLink='/login'>Have an account? Please Login!</a>
+                <button class="btn btn-outline-dark float-right">Register</button>
+            </div>
+        </div>
+    </form>
+</div>
